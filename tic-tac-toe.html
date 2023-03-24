@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tic-tac-toe.css" />
+    <script src="https://kit.fontawesome.com/3bfd3ce9e5.js" crossorigin="anonymous"></script>
+    
+    <title>Vanilla JS T3</title>
+</head>
+
+<body>
+    <main>
+    <div class="container-all">
+       
+        <div class="grid">
+            <!-- Turn Indicator -->
+            <div class="turn " data-id="turn">
+                <i class="fa-solid fa-x turquoise" id="turn"></i>
+                <p class="turquoise">Player 1, you're up!</p>
+            </div>
+            <!-- Dropdown Menu -->
+            <div class="menu" data-id="menu">
+        
+                <button class="menu-btn" data-id="menu-btn">
+                    Actions
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+        
+                <div class="items border hidden" data-id="menu-items">
+                    <button data-id="reset-btn">Reset board</button>
+                    <button data-id="new-round-btn">New Round</button>
+                </div>
+            </div>
+        
+            <!-- Game Board -->
+            <div class="square shadow" id="1" data-id="square"></div>
+            <div class="square shadow" id="2" data-id="square"></div>
+            <div class="square shadow" id="3" data-id="square"></div>
+            <div class="square shadow" id="4" data-id="square"></div>
+            <div class="square shadow" id="5" data-id="square"></div>
+            <div class="square shadow" id="6" data-id="square"></div>
+            <div class="square shadow" id="7" data-id="square"></div>
+            <div class="square shadow" id="8" data-id="square"></div>
+            <div class="square shadow" id="9" data-id="square"></div>
+        
+            <!-- Scoreboard -->
+            <div class="score shadow" style="background-color: var(--turquoise)">
+                <p>Player 1</p>
+                <span data-id="p1-wins">0 Wins</span>
+            </div>
+            <div class="score shadow" style="background-color: var(--light-gray)">
+                <p>Ties</p>
+                <span data-id="ties">0</span>
+            </div>
+            <div class="score shadow" style="background-color: var(--yellow)">
+                <p>Player 2</p>
+                <span data-id="p2-wins">0 Wins</span>
+            </div>
+        
+        
+        </div>
+        
+    </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal hidden" data-id="modal">
+        <div class="modal-contents">
+            <p data-id="modal-text">Player 1 wins!</p>
+            <button data-id="modal-button">Play again</button>
+        </div>
+    </div>
+
+    <script src="./js-tic-tac/app.js" type="module"></script>
+    <!-- Features of using type module on script
+        Import variables and information from other files
+        By default it uses strict to protect your code -->
+    
+</body>
+
+</html>
